@@ -1,5 +1,7 @@
 package org.ccccye.movie.controller;
 
+import com.netflix.loadbalancer.ZoneAvoidanceRule;
+import org.ccccye.movie.feign.TestFeign;
 import org.ccccye.movie.pojo.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,10 +28,12 @@ public class MovieController {
     private DiscoveryClient DiscoveryClient;
     @Autowired
     private LoadBalancerClient LoadBalancerClient;
+    @Autowired
+    private TestFeign TestFeign;
 
     @GetMapping("/user/{id}")
     public User findById(@PathVariable Long id){
-        return RestTemplate.getForObject("http://localhost:8091/"+id, User.class);
+        return TestFeign.findById(id);
     }
 
     @GetMapping("/userinfo")

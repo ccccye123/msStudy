@@ -14,3 +14,7 @@ eureka:
       enabled: true
   instance:
     prefer-ip-address: true
+
+microservice-provider-user:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
