@@ -5,6 +5,9 @@ spring:
   application:
     name: microservice-consumer-movie
 
+logging:
+  level:
+    org.ccccye.movie.feign.TestFeign: DEBUG
 
 eureka:
   client:
