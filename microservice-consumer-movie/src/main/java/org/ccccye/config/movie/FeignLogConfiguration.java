@@ -9,6 +9,7 @@ public class FeignLogConfiguration {
 
     @Bean
     Logger.Level feignLoggerLevel(){
+        // 打印日志的详细程度
         return Logger.Level.BASIC;
     }
 }

@@ -32,4 +32,13 @@ public class SecurityCofnig extends WebSecurityConfigurerAdapter {
 ```
 [参考链接](https://www.cnblogs.com/whm-blog/p/10847139.html)
 
-## 
+## hystrix.stream无法访问解决方法
+增加配置参数
+```yaml
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+```
+[参考链接](https://windmt.com/2018/04/16/spring-cloud-5-hystrix-dashboard/)

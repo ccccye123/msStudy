@@ -1,0 +1,19 @@
+server:
+  port: 8093
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://user:password123@peer1:8761/eureka/,http://user:password123@peer2:8762/eureka/
+    healthcheck:
+      enabled: true
+  instance:
+    prefer-ip-address: true
+
+spring:
+  application:
+    name: service-turbine
+
+turbine:
+  app-config: microservice-consumer-movie,microservice-provider-user
+  clusterNameExpression: "default"

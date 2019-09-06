@@ -1,5 +1,6 @@
 package org.ccccye.movie.controller;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.loadbalancer.ZoneAvoidanceRule;
 import feign.Client;
 import feign.Contract;
@@ -56,9 +57,24 @@ public class MovieController {
 //                ).target(TestFeign.class, "http://microservice-provider-user/");
 //    }
 
+    //@HystrixCommand(fallbackMethod = "findByIdFallback")
     @GetMapping("/user/{id}")
-    public User findByIdUser(@PathVariable Long id){
+    public User findById(@PathVariable Long id){
         return testFeign.findById(id);
+    }
+
+    /**
+     * findById的回退方法
+     * @param id
+     * @return
+     */
+    public User findByIdFallback(Long id){
+        User user = new User();
+        user.setId(-1L);
+        user.setUsername("默认用户");
+        user.setAge(-1);
+        user.setName("default");
+        return user;
     }
 
 //    @GetMapping("/user/{id}")
