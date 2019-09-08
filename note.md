@@ -42,3 +42,14 @@ management:
         include: hystrix.stream
 ```
 [参考链接](https://windmt.com/2018/04/16/spring-cloud-5-hystrix-dashboard/)
+
+## zuul的routes无法访问
+新版的actuator默认没有暴露routes管理端点，需要改配合文件启用，其他被隐藏的管理页面也可以使用一样的方式启用
+```yaml
+management:
+  endpoints:
+    web:
+      exposure:
+        include: routes
+```
+[参考链接](https://blog.csdn.net/wuliu_cui/article/details/86578890)

@@ -10,6 +10,7 @@
         <module name="eureka-server" />
         <module name="microservice-provider-user" />
         <module name="cloud-demo-common" />
+        <module name="microservicegatewayzuul" />
         <module name="producer" />
         <module name="microserviceturbine" />
         <module name="consumer" />
@@ -22,11 +23,13 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="cloud-demo-common" options="-parameters" />
       <module name="consumer" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
       <module name="eurekaserverha" options="-parameters" />
       <module name="microservice-provider-user" options="-parameters" />
       <module name="microserviceconsumermovie" options="-parameters" />
+      <module name="microservicegatewayzuul" options="-parameters" />
       <module name="microserviceturbine" options="-parameters" />
       <module name="producer" options="-parameters" />
       <module name="turbine" options="-parameters" />
