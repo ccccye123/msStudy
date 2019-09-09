@@ -13,6 +13,7 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/cloud-demo-common/pom.xml" />
         <option value="$PROJECT_DIR$/microservice-consumer-moive/pom.xml" />
         <option value="$PROJECT_DIR$/turbine/pom.xml" />
       </set>

@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: microservice-foo
+  cloud:
+    config:
+      uri: http://localhost:8071/
+      profile: dev
+      label: master
+
+server:
+  port: 8072
+
+management:
+  security:
+    enabled: false

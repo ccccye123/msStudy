@@ -9,15 +9,17 @@
         <module name="eurekaserverha" />
         <module name="eureka-server" />
         <module name="microservice-provider-user" />
-        <module name="cloud-demo-common" />
+        <module name="microserviceconfigclient" />
         <module name="microservicegatewayzuul" />
         <module name="producer" />
+        <module name="microserviceconsumermovie" />
         <module name="microserviceturbine" />
         <module name="consumer" />
-        <module name="microserviceconsumermovie" />
+        <module name="microserviceconfigserver" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="cloud-demo-common" target="1.8" />
       <module name="turbine" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -28,6 +30,8 @@
       <module name="eureka-server" options="-parameters" />
       <module name="eurekaserverha" options="-parameters" />
       <module name="microservice-provider-user" options="-parameters" />
+      <module name="microserviceconfigclient" options="-parameters" />
+      <module name="microserviceconfigserver" options="-parameters" />
       <module name="microserviceconsumermovie" options="-parameters" />
       <module name="microservicegatewayzuul" options="-parameters" />
       <module name="microserviceturbine" options="-parameters" />
