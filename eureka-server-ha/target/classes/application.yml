@@ -8,9 +8,9 @@ spring:
       name: user
       password: password123
 
----
-spring:
-  profiles: peer1
+#---
+#spring:
+#  profiles: peer1
 server:
   port: 8761
 eureka:
@@ -19,14 +19,14 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://user:password123@peer2:8762/eureka/
----
-spring:
-  profiles: peer2
-server:
-  port: 8762
-eureka:
-  instance:
-    hostname: peer2
-  client:
-    serviceUrl:
-      defaultZone: http://user:password123@peer1:8761/eureka/
+#---
+#spring:
+#  profiles: peer2
+#server:
+#  port: 8762
+#eureka:
+#  instance:
+#    hostname: peer2
+#  client:
+#    serviceUrl:
+#      defaultZone: http://user:password123@peer1:8761/eureka/
