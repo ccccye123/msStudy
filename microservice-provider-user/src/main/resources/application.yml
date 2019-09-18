@@ -10,11 +10,18 @@ spring:
       platform: h2      # 指定数据源类型
       schema: classpath:schema.sql # 建表结构
       data: classpath:data.sql  # 插入数据脚本
+  security:
+    basic:
+      enabled: true
+    user:
+      name: user
+      password: password123
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://user:password123@peer1:8761/eureka/,http://user:password123@peer2:8762/eureka/
+      defaultZone: http://user:password123@discovery:8761/eureka/
+#      defaultZone: http://user:password123@discovery:8761/eureka/,http://user:password123@discovery:8762/eureka/
     healthcheck:
       enabled: true
   instance:
@@ -22,14 +29,17 @@ eureka:
     metadata-map:
       my-metadata: 我的自定义元数据
 
----
-spring:
-  profiles: 8090
 server:
   port: 8090
 
----
-spring:
-  profiles: 8091
-server:
-  port: 8091
+#---
+#spring:
+#  profiles: 8090
+#server:
+#  port: 8090
+
+#---
+#spring:
+#  profiles: 8091
+#server:
+#  port: 8091
