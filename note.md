@@ -1,3 +1,7 @@
+# 将微服务程序部署到Docker上遗留问题
+- docker-compose scale命令可以做到动态扩容和缩容，那么如何做到高可用呢？如 gateway-zuul服务scale=3，kill掉一个之后不会马上起一个新gateway-zuul的来补充
+- 需要对外开放服务的容器如何做高可用？ -- 或者可以用Nginx负载均衡的方式动态访问容器内部的服务，需要保证Nginx服务稳定；
+
 # 常用命令
 nsenter --target 上进程id --mount --uts --ipc --net --pid  #输入该命令便进入到容器中
 

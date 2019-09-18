@@ -20,8 +20,8 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://user:password123@discovery:8761/eureka/
-#      defaultZone: http://user:password123@discovery:8761/eureka/,http://user:password123@discovery:8762/eureka/
+#      defaultZone: http://user:password123@discovery:8761/eureka/
+      defaultZone: http://user:password123@peer18761/eureka/,http://user:password123@peer2:8762/eureka/
     healthcheck:
       enabled: true
   instance:

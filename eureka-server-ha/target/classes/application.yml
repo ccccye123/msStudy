@@ -9,36 +9,36 @@ spring:
       password: password123
 
 # 服务端口
-server:
-  port: 8761
-
-eureka:
-  instance:
-    hostname: discovery
-  client:
-    register-with-eureka: false
-    fetch-registry: false
-    service-url:
-      defaultZone: http://user:password123@discovery:8761/eureka/
-#---
-#spring:
-#  profiles: peer1
 #server:
 #  port: 8761
+#
 #eureka:
 #  instance:
-#    hostname: peer1
+#    hostname: discovery
 #  client:
-#    serviceUrl:
-#      defaultZone: http://user:password123@discovery:8762/eureka/
-#---
-#spring:
-#  profiles: peer2
-#server:
-#  port: 8762
-#eureka:
-#  instance:
-#    hostname: peer2
-#  client:
-#    serviceUrl:
+#    register-with-eureka: false
+#    fetch-registry: false
+#    service-url:
 #      defaultZone: http://user:password123@discovery:8761/eureka/
+---
+spring:
+  profiles: peer1
+server:
+  port: 8761
+eureka:
+  instance:
+    hostname: peer1
+  client:
+    serviceUrl:
+      defaultZone: http://user:password123@peer2:8762/eureka/
+---
+spring:
+  profiles: peer2
+server:
+  port: 8762
+eureka:
+  instance:
+    hostname: peer2
+  client:
+    serviceUrl:
+      defaultZone: http://user:password123@peer1:8761/eureka/
