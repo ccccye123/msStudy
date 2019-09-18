@@ -6,16 +6,22 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="eurekaserverha" />
-        <module name="eureka-server" />
-        <module name="microservice-provider-user" />
-        <module name="microserviceconfigclient" />
-        <module name="microservicegatewayzuul" />
-        <module name="producer" />
-        <module name="microserviceconsumermovie" />
-        <module name="microserviceturbine" />
         <module name="consumer" />
+        <module name="eureka-server" />
+        <module name="eureka-server-ha" />
+        <module name="eurekaserverha" />
+        <module name="microservice-config-client" />
+        <module name="microservice-config-server" />
+        <module name="microservice-consumer-movie" />
+        <module name="microservice-gateway-zuul" />
+        <module name="microservice-provider-user" />
+        <module name="microservice-turbine" />
+        <module name="microserviceconfigclient" />
         <module name="microserviceconfigserver" />
+        <module name="microserviceconsumermovie" />
+        <module name="microservicegatewayzuul" />
+        <module name="microserviceturbine" />
+        <module name="producer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -28,8 +34,14 @@
       <module name="cloud-demo-common" options="-parameters" />
       <module name="consumer" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
+      <module name="eureka-server-ha" options="-parameters" />
       <module name="eurekaserverha" options="-parameters" />
+      <module name="microservice-config-client" options="-parameters" />
+      <module name="microservice-config-server" options="-parameters" />
+      <module name="microservice-consumer-movie" options="-parameters" />
+      <module name="microservice-gateway-zuul" options="-parameters" />
       <module name="microservice-provider-user" options="-parameters" />
+      <module name="microservice-turbine" options="-parameters" />
       <module name="microserviceconfigclient" options="-parameters" />
       <module name="microserviceconfigserver" options="-parameters" />
       <module name="microserviceconsumermovie" options="-parameters" />

@@ -1,3 +1,6 @@
+# 常用命令
+nsenter --target 上进程id --mount --uts --ipc --net --pid  #输入该命令便进入到容器中
+
 # 版本差异
 书使用的spring cloud版本是Camden SR4,我用的是Greenwich SR2
 ## feign的差异

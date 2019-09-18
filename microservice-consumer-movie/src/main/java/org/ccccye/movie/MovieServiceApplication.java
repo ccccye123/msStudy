@@ -22,9 +22,9 @@ public class MovieServiceApplication {
         SpringApplication.run(MovieServiceApplication.class, args);
     }
 
-    @Bean
-    @LoadBalanced
-    public RestTemplate RestTemplate(){
-        return new RestTemplate();
-    }
+//    @Bean
+//    @LoadBalanced
+//    public RestTemplate RestTemplate(){
+//        return new RestTemplate();
+//    }
 }

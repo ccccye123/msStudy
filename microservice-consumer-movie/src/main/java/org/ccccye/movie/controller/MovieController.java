@@ -32,8 +32,8 @@ import java.util.List;
 public class MovieController {
     private static final Logger Logger = LoggerFactory.getLogger(MovieController.class);
 
-    @Autowired
-    private RestTemplate RestTemplate;
+//    @Autowired
+//    private RestTemplate RestTemplate;
     @Autowired
     private DiscoveryClient DiscoveryClient;
     @Autowired
