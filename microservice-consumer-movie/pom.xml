@@ -11,7 +11,7 @@
     </parent>
     <groupId>org.ccccye</groupId>
     <artifactId>microservice-consumer-movie</artifactId>
-    <name>movie service</name>
+    <name>microservice-consumer-movie</name>
     <description>provider movie service</description>
 
     <properties>

@@ -32,7 +32,7 @@
     </dependencyManagement>
 
     <modules>
-        <module>cloud-demo-common</module>
+<!--        <module>cloud-demo-common</module>-->
         <module>microservice-consumer-movie</module>
         <module>eureka-server-ha</module>
         <module>microservice-turbine</module>

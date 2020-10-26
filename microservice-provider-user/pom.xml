@@ -8,10 +8,11 @@
 		<version>2.1.7.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
 	<groupId>org.ccccye</groupId>
 	<artifactId>microservice-provider-user</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>User Service</name>
+	<name>microservice-provider-user</name>
 	<description>provider user service</description>
 
 	<properties>
