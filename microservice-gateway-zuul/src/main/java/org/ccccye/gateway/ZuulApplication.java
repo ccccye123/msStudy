@@ -15,7 +15,6 @@ public class ZuulApplication {
         SpringApplication.run(ZuulApplication.class, args);
     }
 
-
     @Bean
     public PreRequestLogFilter preRequestLogFilter(){
         return new PreRequestLogFilter();

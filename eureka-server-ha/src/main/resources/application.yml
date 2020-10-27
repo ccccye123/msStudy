@@ -3,7 +3,7 @@ spring:
     name: microservice-discovery
   security:
     basic:
-      enabled: true
+      enable: true
     user:
       name: user
       password: password123

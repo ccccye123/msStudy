@@ -1,5 +1,5 @@
-server:
-  port: 8090
+#server:
+#  port: 8090
 
 spring:
   application:
@@ -36,14 +36,14 @@ management:
     health:
       show-details: always
 
-#---
-#spring:
-#  profiles: 8090
-#server:
-#  port: 8090
+---
+spring:
+  profiles: 8090
+server:
+  port: 8090
 
-#---
-#spring:
-#  profiles: 8091
-#server:
-#  port: 8091
+---
+spring:
+  profiles: 8091
+server:
+  port: 8091
